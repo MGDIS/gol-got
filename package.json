@@ -1,0 +1,32 @@
+{
+  "name": "@mgdis/gol-got",
+  "version": "1.0.0",
+  "description": "Wrapper for got with proxy env variables management",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc -r lcov -r text mocha",
+    "lint": "eslint ."
+  },
+  "license": "MIT",
+  "repository": "mgdis/gol-got",
+  "dependencies": {
+    "proxy-from-env": "^1.0.0",
+    "tunnel-agent": "^0.6.0"
+  },
+  "peerDependencies": {
+    "got": "^9.3.2"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "mocha": "^5.2.0",
+    "mocha-multi-reporters": "^1.1.7",
+    "nyc": "^13.1.0",
+    "should": "^13.2.3"
+  }
+}
