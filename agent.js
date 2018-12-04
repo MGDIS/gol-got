@@ -13,7 +13,13 @@ function getAgent(url) {
     const parsedProxyUrl = URL.parse(proxyUrl);
     const tunnelProxyProtocol = parsedProxyUrl.protocol === 'https:' ? 'Https' : 'Http';
     const method = `${tunnelUrlProtocol}Over${tunnelProxyProtocol}`;
-    agent = tunnel[method];
+    agent = tunnel[method]({
+      proxy: {
+        port: parsedProxyUrl.port,
+        host: parsedProxyUrl.hostname,
+        proxyAuth: parsedProxyUrl.auth
+      }
+    });
   }
   return agent;
 }
