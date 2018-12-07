@@ -44,12 +44,16 @@ const response = await got('https://www/mgdis.fr/resource/1', { agent });
 You can do:
 
 ```js
-const got = require('gol-got');
+const golGot = require('gol-got');
 
 /* Proxy env variables*/
 process.env.NO_PROXY = 'https://noproxy.com'
 process.env.HTTPS_PROXY = 'https://proxy.mgdis.fr'
 
+// Prepare a Got instance
+const got = golGot('https://www/mgdis.fr/resource/1');
+
+// Use Got as usual
 const response = await got('https://www/mgdis.fr/resource/1');
 ```
 

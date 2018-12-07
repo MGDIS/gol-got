@@ -13,6 +13,7 @@
   "license": "MIT",
   "repository": "mgdis/gol-got",
   "dependencies": {
+    "debug": "^4.1.0",
     "proxy-from-env": "^1.0.0",
     "tunnel-agent": "^0.6.0"
   },
