@@ -2,6 +2,7 @@
 
 > Convenience wrapper for [`got`](https://github.com/sindresorhus/got) with automatic consideration of proxy env variables.
 
+>  got is a human-friendly and powerful HTTP request library for Node.js 
 
 ## Install
 
@@ -37,7 +38,7 @@ switch (method) {
 }
 /* ------------------------------------------------------- */
 
-const response = await got('https://www/mgdis.fr/resource/1', { agent });
+const response = await got('https://www.mgdis.fr/resource/1', { agent });
 
 ```
 
@@ -51,10 +52,10 @@ process.env.NO_PROXY = 'https://noproxy.com'
 process.env.HTTPS_PROXY = 'https://proxy.mgdis.fr'
 
 // Prepare a Got instance
-const got = golGot('https://www/mgdis.fr/resource/1');
+const got = golGot('https://www.mgdis.fr/resource/1');
 
 // Use Got as usual
-const response = await got('https://www/mgdis.fr/resource/1');
+const response = await got('https://www.mgdis.fr/resource/1');
 ```
 
 
